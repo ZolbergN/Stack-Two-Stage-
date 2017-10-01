@@ -1,5 +1,5 @@
 #include "stack.hpp"
 
 int main() {
-	StackPOP(2);
+	stack_pop(2);
 }
