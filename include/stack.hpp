@@ -6,7 +6,7 @@ using namespace std;
 void stack_empty(size_t);
 void stack_push(size_t);
 void stack_pop(size_t);
-void stack-init();
+void stack_init();
 
 template <typename T>
 class stack
@@ -67,22 +67,4 @@ template<typename T>
 void stack<T>::printStack() {
 	for (int i = count_ - 1; i >= 0; i--)
 		cout << "[" << setw(4) << array_[i] << "]" << endl;
-}
-
-void stack_empty(size_t n)
-{
-	stack<int> S;
-	for (int i = 0; i < n; i++)
-	{
-		S.push(i);
-	}
-
-	while (!S.empty())
-	{
-		cout << S.pop() << endl;
-	}
-
-	cout << "Created" << endl;
-	cout << "Push" << endl;
-	cout << "Complete" << endl;
 }
