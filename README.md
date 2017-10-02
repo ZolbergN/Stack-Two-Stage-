@@ -1,31 +1,46 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## Homework II (Stack)
+Данная домашняя работа посвящена изучению сборки проектов при помощи **cmake**.
 
+## Tasks
+- [X] 1. Необходимо добавить метод empty для класа stack.
+- [X] 2. Необходимо добавить примеры для всех методов.
+- [X] 3. Необходимо добавить конфигурационный файл CMakeLists.txt
+- [X] 4. Обеспечить сборку с примерами и сборку без примеров
 
-Hi there! Welcome to Cloud9 IDE!
+## Tutorial
 
-To get you started with C/C++, we have created some small hello world
-applications and a Makefile.
+#### Структура репозитория:
+```ShellSession
+$ tree repo
+examples/
+- init.cpp
+- push.cpp
+- pop.cpp
+- empty.cpp
+include/
+- stack.hpp
+sources/
+- main.cpp
+CMakeLists.txt
+README.md
+```
 
-Have a look at the files, and use the terminal to build them:
+#### 1-е условие:
+```ShellSession
+# сборка без примеров
+$ cd repo
+$ cmake -H. -B_builds
+$ cmake --builds _builds
+```
 
-    $ make
-    $ ./hello-c-world
-    $ ./hello-cpp-world
-
-We're sure you can take it from there. Go ahead and edit the code, 
-or add some new files. It's all up to you! 
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-# Stack-Two-Stage-
+#### 2-е условие:
+```ShellSession
+# сборка с примерами
+$ cd repo
+$ cmake -H. -B_builds -DBUILD_EXAMPLES=ON
+$ cmake --builds _builds
+$ ls _builds/init  # [✔]
+$ ls _builds/pop   # [✔] 
+$ ls _builds/push  # [✔]
+$ ls _builds/empty # [✔]
+```
