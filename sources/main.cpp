@@ -4,7 +4,7 @@ int s = 0;
 
 void stack_init() {
 	Stack<int> st;
-	cout << "Created stack" << ++st << endl;
+	cout << "Created stack" << st << endl;
 }
 
 void stack_push(size_t n) {
