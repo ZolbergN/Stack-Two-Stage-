@@ -3,11 +3,11 @@
 
 using namespace std;
 
-void stackInit() {
+void stack_init() {
 	Stack<int> st;
 	cout << "Created st" << endl;
 }
 
 int main() {
-	stackInit();
+	stack_init();
 }
