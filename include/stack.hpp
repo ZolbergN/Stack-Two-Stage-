@@ -1,11 +1,9 @@
+#ifndef STACK_HPP
+#define STACK_HPP
+
 #include <iostream>
 
 using namespace std;
-
-void stack_empty(size_t);
-void stack_push(size_t);
-void stack_pop(size_t);
-void stack_init();
 
 template <typename T>
 class stack
@@ -59,7 +57,8 @@ size_t stack<T>::count() const {
 template<typename T>
 bool stack<T>::empty() const
 {
-	return count();
+	if(count() == 0) return true;
+        return false;
 }
 
 template<typename T>
@@ -67,3 +66,4 @@ void stack<T>::printStack() {
 	for (int i = count_ - 1; i >= 0; i--)
 		cout << "[" << setw(4) << array_[i] << "]" << endl;
 }
+#endif
