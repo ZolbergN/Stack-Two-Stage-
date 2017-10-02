@@ -1,45 +1,27 @@
+#include <iostream>
 #include "stack.hpp"
 
-int s = 0;
-
-void stack_init() {
-	Stack<int> st;
-	cout << "Created stack" << st << endl;
-}
-
-void stack_push(size_t n) {
-	Stack<int> st;
-	for(int i = 0; i<n; i++) {
-		st.push(i);
-	}
-	cout << "Created stack" << " " << n << endl;
-}
-
-void stack_pop(size_t n) {
-	Stack<int> st;
-	for(int i = 0; i<n; i++) {
-		st.push(i);
-	}
+int main() {
+	try {
+		Stack<int> st(10);
 		
-	for(int j = 0; j<(n/2); j++) {
-		cout << st.pop() << " ";
-	}
-	cout << endl;
+		st.push(2);
+		st.push(4);
+		st.push(7);
+		st.push(5);
+		st.push(8);
+		st.push(766);
+		st.push(9);
+		st.push(32);
+		st.push(432);
+		st.push(1);
 
-	cout << "Created stack" << endl;
-	cout << "Push" << n << endl;
-	cout << "Pop" << (n/2) << endl;
-}
+		for(int i = 0; i < 10; i++) {
+			cout << st.pop() << endl;
+		}
+		cout << endl
 
-void stack_empty(size_t n) {
-	Stack<int> st;
-	for(int i = 0; i<n; i++) {
-		st.push(i);
+	} catch(const exception& e) {
+		cout << e.what() << endl;
 	}
-
-	while(!st.empty()) {
-		cout << st.pop() << endl;
-	}
-	cout << "Created stack" << endl;
-	cout << "Push " << n << endl;
 }
