@@ -3,7 +3,7 @@
 
 int main() {
 	try {
-		Stack<int> st(10);
+		stack<int> st(10);
 		
 		st.push(2);
 		st.push(4);
@@ -19,7 +19,7 @@ int main() {
 		for(int i = 0; i < 10; i++) {
 			cout << st.pop() << endl;
 		}
-		cout << endl
+		cout << endl;
 
 	} catch(const exception& e) {
 		cout << e.what() << endl;
