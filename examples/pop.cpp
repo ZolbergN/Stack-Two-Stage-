@@ -4,7 +4,7 @@
 using namespace std;
 
 void stack_pop() {
-	Stack<int> st;
+	stack<int> st;
 	for(int i = 0; i < 10; i++) { 
 		st.push(i); 
 	}
