@@ -8,9 +8,6 @@ void stack_push() {
 	for(int i = 0; i < 10; i++) {
 		st.push(i*2); 
 	}
-	for(auto j = 0; j < st.count(); j++) {
-		cout << st[j] << " "; 
-	}
 }
 
 int main() {
