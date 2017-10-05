@@ -8,7 +8,7 @@ void stack_push() {
 	for(int i = 0; i < 10; i++) {
 		st.push(i*2); 
 	}
-	for(size_t j = 0; j < st.count(); j++) {
+	for(auto j = 0; j < st.count(); j++) {
 		cout << st[j] << " "; 
 	}
 }
