@@ -4,7 +4,7 @@
 using namespace std;
 
 void stack_push() {
-	Stack<int> st;
+	stack<int> st;
 	for(int i = 0; i < 10; i++) {
 		arrayInt.push(i*2); 
 	}
