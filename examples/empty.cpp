@@ -11,7 +11,7 @@ void stack_empty() {
 	while(!arr.empty()) {
 		cout << arr.pop() << " ";
 	}
-	cout < endl;
+	cout << endl;
 }
 
 int main() {
