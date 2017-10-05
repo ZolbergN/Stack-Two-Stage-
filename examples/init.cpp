@@ -4,7 +4,7 @@
 using namespace std;
 
 void stack_init() {
-	Stack<int> st;
+	stack<int> st;
 	cout << "Created st" << endl;
 }
 
