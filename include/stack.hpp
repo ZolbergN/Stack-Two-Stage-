@@ -45,7 +45,7 @@ void stack<T>::push(const T &value) {
 template<typename T>
 T stack<T>::pop() {
 	if (count_ == 0) {
-		throw domain_error{ "*** ERROR - Stack empty ***" };
+		throw domain_error( "*** ERROR - Stack empty ***" );
 	}
 	--count_;
 	return array_[count_];
