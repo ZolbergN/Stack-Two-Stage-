@@ -4,7 +4,6 @@
 #include <iostream>
 #include <iomanip>
 #include <string.h>
-#include <stdexcept>
 
 using namespace std;
 
