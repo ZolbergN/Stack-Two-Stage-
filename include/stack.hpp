@@ -46,7 +46,7 @@ void stack<T>::push(const T &value) {
 template<typename T>
 T stack<T>::pop() {
 	if (count_ == 0) {
-		throw domain_error{ "Ошибка: стек пуст" };
+		throw runtime_error{ "Ошибка: стек пуст" };
 	}
 	--count_;
 	return array_[count_];
