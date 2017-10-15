@@ -17,11 +17,11 @@ int main() {
 		st.push(1);
 
 		for(int i = 0; i < 10; i++) {
-			cout << st.pop() << endl;
+			std::cout << st.pop() << std::endl;
 		}
-		cout << endl;
+		std::cout << std::endl;
 
-	} catch(const exception& e) {
-		cout << e.what() << endl;
+	} catch(const std::exception& e) {
+		std::cout << e.what() << std::endl;
 	}
 }
