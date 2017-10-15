@@ -59,8 +59,7 @@ size_t stack<T>::count() const {
 template<typename T>
 bool stack<T>::empty() const
 {
-	if(count() == 0) return true;
-        return false;
+	return count_ == 0;
 }
 
 template<typename T>
