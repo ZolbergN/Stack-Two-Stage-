@@ -43,7 +43,7 @@ void stack<T>::push(const T &value) {
 template<typename T>
 T stack<T>::pop() {
 	if (count_ == 0) {
-		throw domain_error{ "ERROR --- Stack empty" };
+		throw std::domain_error{ "ERROR --- Stack empty" };
 	}
 	--count_;
 	return array_[count_];
@@ -63,6 +63,6 @@ bool stack<T>::empty() const
 template<typename T>
 void stack<T>::printStack() {
 	for (int i = count_ - 1; i >= 0; i--)
-		std::cout << "[" << setw(4) << array_[i] << "]" << std::endl;
+		std::cout << "[" << std::setw(4) << array_[i] << "]" << std::endl;
 }
 #endif
