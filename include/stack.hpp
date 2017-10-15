@@ -13,7 +13,7 @@ class stack
 private:
 	T * array_;
 	size_t array_size_;
-	size_t count_;
+	size_t count_ = 0;
 public:
 	stack();
 	stack(size_t);
@@ -25,9 +25,9 @@ public:
 };
 
 template <typename T>
-stack<T>::stack() : array_size_(2), array_(new T[array_size_]), count_(0) {}
+stack<T>::stack() : array_size_(2), array_{new T[array_size_]} {}
 template <typename T>
-stack<T>::stack(size_t maxEl) : array_size_(maxEl), array_(new T[maxEl]), count_(0) {}
+stack<T>::stack(size_t maxEl) : array_size_(maxEl), array_{new T[maxEl]} {}
 
 template <typename T>
 void stack<T>::push(const T &value) {
