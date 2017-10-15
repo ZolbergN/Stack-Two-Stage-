@@ -5,8 +5,6 @@
 #include <iomanip>
 #include <string.h>
 
-using namespace std;
-
 template <typename T>
 class stack
 {
